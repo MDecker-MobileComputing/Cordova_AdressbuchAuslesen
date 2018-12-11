@@ -1,5 +1,6 @@
 /*jshint esversion: 6 */
 
+/* This file is licensed under the terms of the BSD 3-Clause License. */
 
 /**
  * Event-Handler-Funktion für Erfolgsfall bei Aufruf von Funktion
@@ -44,7 +45,6 @@ function holeAlleKontakte() {
         alert("Adressbuch-API steht nicht zur Verfügung.");
         return;
     }
-
 
     const felderArray = [ contactsAPI.fieldType.displayName ];
 
