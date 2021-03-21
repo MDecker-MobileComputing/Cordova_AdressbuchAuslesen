@@ -2,6 +2,7 @@
 
 /* This file is licensed under the terms of the BSD 3-Clause License. */
 
+
 /**
  * Event-Handler-Funktion für Erfolgsfall bei Aufruf von Funktion
  * navigator.contacts.find().
@@ -17,6 +18,7 @@ function onKontakteGefunden(kontakteArray) {
 
     const listeKontakte = $("#listeKontakte");
     for (let i = 0; i < anzahl; i++) {
+
         let anzeigeName  = kontakteArray[i].displayName;
         let listenElement = `<li>${anzeigeName}</li>`;
         listeKontakte.append(listenElement);
@@ -29,6 +31,7 @@ function onKontakteGefunden(kontakteArray) {
  * navigator.contacts.find().
  */
 function onKontakteFehler(fehlerObjekt) {
+
     alert("Fehler beim Zugriff auf Adressbuch aufgetreten: " + fehlerObjekt);
 }
 
@@ -52,15 +55,16 @@ function holeAlleKontakte() {
     optionen.filter   = ""; // Leerer Filter, also alle Kontakte wählen
     optionen.multiple = true;
 
-    contactsAPI.find(felderArray, onKontakteGefunden, onKontakteFehler, optionen); 
+    contactsAPI.find(felderArray, onKontakteGefunden, onKontakteFehler, optionen);
 }
 
 
-/* 
+/*
  * Event-Handler-Funktion für Cordova-spezifisches Event
  * "deviceready".
  */
 function onDeviceReadyHandler() {
+
     console.log("Cordova ist jetzt bereit.");
     holeAlleKontakte();
     console.log("Abfrage an Adressbuch wurde abgeschickt.");
