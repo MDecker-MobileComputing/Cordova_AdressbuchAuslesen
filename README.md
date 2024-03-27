@@ -3,7 +3,7 @@
 <br>
 
 Simple [Cordova](https://cordova.apache.org/) app to demonstrate the usage of 
-a plugin to query the address book of the device.
+[this plugin](https://www.npmjs.com/package/cordova-plugin-contacts) to query the address book of the device.
 Simply all names (first name and familiy name) of each entry in the address book
 are given.
 
